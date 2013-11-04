@@ -12,10 +12,11 @@
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
-  limitations under the License.
+  limitations under the License.
 -->
 
 <resources>
+
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
@@ -40,5 +41,6 @@
     <string name="image_clue_4">Image Clue 4</string>
     <string name="qr_scan_btn">QR scan</string>
     <string name="next">NEXT</string>
+    <string name="title_activity_sliding">Sliding</string>
 
 </resources>

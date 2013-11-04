@@ -79,20 +79,22 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class id {
         public static final int LinearLayout1=0x7f060006;
+        public static final int action_settings=0x7f06002c;
         public static final int actionbar_compat=0x7f060000;
         public static final int actionbar_compat_item_refresh=0x7f060003;
         public static final int actionbar_compat_item_refresh_progress=0x7f060002;
         public static final int actionbar_compat_title=0x7f060001;
+        public static final int closeSlides=0x7f060028;
         public static final int clueStatus=0x7f06000a;
-        public static final int content_frame=0x7f060029;
-        public static final int drawer_layout=0x7f060028;
+        public static final int content_frame=0x7f06002a;
+        public static final int drawer_layout=0x7f060029;
         public static final int imageView1=0x7f060009;
         public static final int imageView2=0x7f06001a;
         public static final int imageView3=0x7f060022;
         public static final int imageView4=0x7f060012;
         public static final int menu_refresh=0x7f060004;
         public static final int menu_search=0x7f060005;
-        public static final int scan=0x7f06002a;
+        public static final int scan=0x7f06002b;
         public static final int tag_1_found_marker=0x7f06000d;
         public static final int tag_1_next=0x7f06000f;
         public static final int tag_1_notfound_marker=0x7f06000c;
@@ -129,10 +131,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int activity_qrscan_four=0x7f030003;
         public static final int activity_qrscan_sec=0x7f030004;
         public static final int activity_qrscan_th=0x7f030005;
-        public static final int main=0x7f030006;
+        public static final int activity_sliding=0x7f030006;
+        public static final int activity_switcher=0x7f030007;
+        public static final int main=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
+        public static final int sliding=0x7f0a0001;
     }
     public static final class string {
         public static final int action_settings=0x7f08000b;
@@ -157,6 +162,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title_activity_qr_first=0x7f08000e;
         public static final int title_activity_qrscan=0x7f08000a;
         public static final int title_activity_qrscan_first=0x7f080010;
+        public static final int title_activity_sliding=0x7f080018;
         public static final int toggle_title=0x7f080005;
         public static final int two=0x7f080001;
     }

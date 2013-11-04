@@ -17,11 +17,13 @@
 package com.orlando.qrscan.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.Menu;
@@ -64,65 +66,66 @@ public class MainActivity extends ActionBarActivity {
 //			e1.printStackTrace();
 //		}  
 		
+
+            
+				ClueManager.initClueManager(getApplicationContext());
+				fragmentManager = getSupportFragmentManager();
 		
+				int prog = ClueManager.getProgress();
+				switch (prog) {
+				case 1:
+					try {
+						qr_first = new QRscan_first();
 		
-		ClueManager.initClueManager(getApplicationContext());
-		fragmentManager = getSupportFragmentManager();
-
-		int prog = ClueManager.getProgress();
-		switch (prog) {
-		case 1:
-			try {
-				qr_first = new QRscan_first();
-
-				boolean res = FragmentHandler.replaceFragment(fragmentManager,
-						"first", qr_first, R.id.content_frame);
-				Log.i("Main", "fRAGMENT " + "first" + " INSERITO: " + res);
-			} catch (Exception e) {
-				e.printStackTrace();
-				finish();
-			}
-			break;
-		case 2:
-			try {
-				qr_sec = new QRscan_sec();
-
-				boolean res = FragmentHandler.replaceFragment(fragmentManager,
-						"sec", qr_sec, R.id.content_frame);
-				Log.i("Main", "fRAGMENT " + "sec" + " INSERITO: " + res);
-			} catch (Exception e) {
-				e.printStackTrace();
-				finish();
-			}
-			break;
-		case 3:
-			try {
-				qr_th = new QRscan_th();
-
-				boolean res = FragmentHandler.replaceFragment(fragmentManager,
-						"th", qr_th, R.id.content_frame);
-				Log.i("Main", "fRAGMENT " + "th" + " INSERITO: " + res);
-			} catch (Exception e) {
-				e.printStackTrace();
-				finish();
-			}
-			break;
-			
-		case 4:
-			try {
-				qr_four = new QRscan_four();
-
-				boolean res = FragmentHandler.replaceFragment(fragmentManager,
-						"four", qr_four, R.id.content_frame);
-				Log.i("Main", "fRAGMENT " + "four" + " INSERITO: " + res);
-			} catch (Exception e) {
-				e.printStackTrace();
-				finish();
-			}
-			break;
-		default:
-			break;
-		}
+						boolean res = FragmentHandler.replaceFragment(fragmentManager,
+								"first", qr_first, R.id.content_frame);
+						Log.i("Main", "fRAGMENT " + "first" + " INSERITO: " + res);
+					} catch (Exception e) {
+						e.printStackTrace();
+						finish();
+					}
+					break;
+				case 2:
+					try {
+						qr_sec = new QRscan_sec();
+		
+						boolean res = FragmentHandler.replaceFragment(fragmentManager,
+								"sec", qr_sec, R.id.content_frame);
+						Log.i("Main", "fRAGMENT " + "sec" + " INSERITO: " + res);
+					} catch (Exception e) {
+						e.printStackTrace();
+						finish();
+					}
+					break;
+				case 3:
+					try {
+						qr_th = new QRscan_th();
+		
+						boolean res = FragmentHandler.replaceFragment(fragmentManager,
+								"th", qr_th, R.id.content_frame);
+						Log.i("Main", "fRAGMENT " + "th" + " INSERITO: " + res);
+					} catch (Exception e) {
+						e.printStackTrace();
+						finish();
+					}
+					break;
+					
+				case 4:
+					try {
+						qr_four = new QRscan_four();
+		
+						boolean res = FragmentHandler.replaceFragment(fragmentManager,
+								"four", qr_four, R.id.content_frame);
+						Log.i("Main", "fRAGMENT " + "four" + " INSERITO: " + res);
+					} catch (Exception e) {
+						e.printStackTrace();
+						finish();
+					}
+					break;
+				default:
+					break;
+				}
+        	
 
 	}
 
