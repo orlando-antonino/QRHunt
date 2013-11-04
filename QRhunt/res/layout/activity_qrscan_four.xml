@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".QRscan_first" >
+
+    <TextView
+        android:id="@+id/textResult4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textType4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_weight="3"
+        android:src="@drawable/greengoogle"
+        android:contentDescription="@string/image_clue_4" />
+
+<!--     Button -->
+<!--         android:id="@+id/button1" -->
+<!--         style="?android:attr/buttonStyleSmall" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_marginBottom="48dp" -->
+<!--         android:onClick="ScanQR" -->
+<!--         android:text="@string/qr_scan_btn"  -->
+	
+	<LinearLayout
+        android:id="@+id/clueStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp" >
+	    <LinearLayout
+	            android:id="@+id/tag_container_4"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center" >
+	
+	            <TextView
+	                android:id="@+id/tag_4_notfound_marker"
+	                style="@style/TagMarker"
+	                android:layout_width="70dp"
+	                android:layout_height="70dp"
+	                android:text="@string/two" />
+	
+	            <ImageView
+	                android:id="@+id/tag_4_found_marker"
+	                android:layout_width="70dp"
+	                android:layout_height="70dp"
+	                android:src="@drawable/red_circle"
+	                android:visibility="gone"
+	                /> 
+	
+	    </LinearLayout>
+	    	    <LinearLayout
+	            android:id="@+id/tag_container_44"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center" >
+	            <ImageView
+	                android:id="@+id/tag_4_next"
+	                android:layout_width="70dp"
+	                android:layout_height="70dp"
+	                android:src="@drawable/green_circle_arrow"
+	                android:visibility="gone"
+	                 />
+  	    </LinearLayout>   
+   
+	</LinearLayout>
+</LinearLayout>
