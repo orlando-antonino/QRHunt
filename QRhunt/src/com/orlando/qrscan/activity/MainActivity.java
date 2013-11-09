@@ -192,7 +192,9 @@ public class MainActivity extends ActionBarActivity {
 //			scanContent = "http://qrscan.dne/?c=firstclue";
 			showToast(scanContent);
 
-			ClueManager.setProgress(scanContent);
+			if (false == ClueManager.setProgress(scanContent)) {
+            showToast("Wrong QR!!!");
+         }
 		} else
 			showToast("no scan result");
 
