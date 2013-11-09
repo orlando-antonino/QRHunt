@@ -52,49 +52,67 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int activity_horizontal_margin=0x7f050003;
         public static final int activity_vertical_margin=0x7f050004;
-        public static final int font_size_medium=0x7f050005;
+        public static final int font_size_large=0x7f050007;
+        public static final int font_size_medium=0x7f050006;
+        public static final int font_size_small=0x7f050005;
+        public static final int margin_huge=0x7f05000b;
+        public static final int margin_large=0x7f05000a;
+        public static final int margin_medium=0x7f050009;
+        public static final int margin_small=0x7f050008;
     }
     public static final class drawable {
         public static final int actionbar_compat_item=0x7f020000;
         public static final int actionbar_compat_item_focused=0x7f020001;
         public static final int actionbar_compat_item_pressed=0x7f020002;
         public static final int actionbar_shadow=0x7f020003;
-        public static final int arrowr=0x7f020004;
-        public static final int candle=0x7f020005;
-        public static final int dashed_circle=0x7f020006;
-        public static final int green_circle=0x7f020007;
-        public static final int green_circle_arrow=0x7f020008;
-        public static final int greengoogle=0x7f020009;
-        public static final int ic_action_refresh=0x7f02000a;
-        public static final int ic_action_search=0x7f02000b;
-        public static final int ic_action_share=0x7f02000c;
-        public static final int ic_home=0x7f02000d;
-        public static final int ic_launcher=0x7f02000e;
-        public static final int ic_menu_share=0x7f02000f;
-        public static final int jelly=0x7f020010;
-        public static final int octopus=0x7f020011;
-        public static final int pawprint=0x7f020012;
-        public static final int red_circle=0x7f020013;
-        public static final int solid_circle=0x7f020014;
+        public static final int alex_flat=0x7f020004;
+        public static final int arrowr=0x7f020005;
+        public static final int candle=0x7f020006;
+        public static final int dashed_circle=0x7f020007;
+        public static final int green_circle=0x7f020008;
+        public static final int green_circle_arrow=0x7f020009;
+        public static final int greengoogle=0x7f02000a;
+        public static final int ic_action_refresh=0x7f02000b;
+        public static final int ic_action_search=0x7f02000c;
+        public static final int ic_action_share=0x7f02000d;
+        public static final int ic_home=0x7f02000e;
+        public static final int ic_launcher=0x7f02000f;
+        public static final int ic_menu_share=0x7f020010;
+        public static final int jelly=0x7f020011;
+        public static final int logo=0x7f020012;
+        public static final int octopus=0x7f020013;
+        public static final int pawprint=0x7f020014;
+        public static final int red_circle=0x7f020015;
+        public static final int sad_bugdroid=0x7f020016;
+        public static final int solid_circle=0x7f020017;
+        public static final int tag_sample=0x7f020018;
+        public static final int tag_sample_=0x7f020019;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f060006;
-        public static final int action_settings=0x7f06002c;
+        public static final int about=0x7f060035;
+        public static final int action_settings=0x7f060036;
         public static final int actionbar_compat=0x7f060000;
         public static final int actionbar_compat_item_refresh=0x7f060003;
         public static final int actionbar_compat_item_refresh_progress=0x7f060002;
         public static final int actionbar_compat_title=0x7f060001;
-        public static final int closeSlides=0x7f060028;
+        public static final int closeSlides=0x7f06002b;
         public static final int clueStatus=0x7f06000a;
-        public static final int content_frame=0x7f06002a;
-        public static final int drawer_layout=0x7f060029;
+        public static final int content=0x7f06002e;
+        public static final int content_frame=0x7f06002d;
+        public static final int drawer_layout=0x7f06002c;
+        public static final int imageView=0x7f06002f;
         public static final int imageView1=0x7f060009;
         public static final int imageView2=0x7f06001a;
         public static final int imageView3=0x7f060022;
         public static final int imageView4=0x7f060012;
         public static final int menu_refresh=0x7f060004;
         public static final int menu_search=0x7f060005;
-        public static final int scan=0x7f06002b;
+        public static final int next_button=0x7f06002a;
+        public static final int pager=0x7f060028;
+        public static final int prev_button=0x7f060029;
+        public static final int scan=0x7f060034;
+        public static final int sign_in_button=0x7f060033;
         public static final int tag_1_found_marker=0x7f06000d;
         public static final int tag_1_next=0x7f06000f;
         public static final int tag_1_notfound_marker=0x7f06000c;
@@ -123,6 +141,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int textType2=0x7f060019;
         public static final int textType3=0x7f060021;
         public static final int textType4=0x7f060011;
+        public static final int textView=0x7f060030;
+        public static final int textView2=0x7f060032;
+        public static final int textView3=0x7f060031;
     }
     public static final class layout {
         public static final int actionbar_compat=0x7f030000;
@@ -131,43 +152,62 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int activity_qrscan_four=0x7f030003;
         public static final int activity_qrscan_sec=0x7f030004;
         public static final int activity_qrscan_th=0x7f030005;
-        public static final int activity_sliding=0x7f030006;
-        public static final int activity_switcher=0x7f030007;
-        public static final int main=0x7f030008;
+        public static final int activity_screen_slide_pager=0x7f030006;
+        public static final int activity_sliding=0x7f030007;
+        public static final int activity_switcher=0x7f030008;
+        public static final int main=0x7f030009;
+        public static final int story_frag_1=0x7f03000a;
+        public static final int story_frag_1a=0x7f03000b;
+        public static final int story_frag_2=0x7f03000c;
+        public static final int story_frag_3=0x7f03000d;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
         public static final int sliding=0x7f0a0001;
     }
     public static final class string {
-        public static final int action_settings=0x7f08000b;
-        public static final int alternate_title=0x7f080004;
-        public static final int app_name=0x7f080003;
-        public static final int firstclueImg=0x7f080011;
-        public static final int hello_world=0x7f08000c;
-        public static final int image_clue_1=0x7f080012;
-        public static final int image_clue_2=0x7f080013;
-        public static final int image_clue_3=0x7f080014;
-        public static final int image_clue_4=0x7f080015;
-        public static final int menu_refresh=0x7f080006;
-        public static final int menu_scan=0x7f080009;
-        public static final int menu_search=0x7f080007;
-        public static final int menu_share=0x7f080008;
-        public static final int next=0x7f080017;
-        public static final int one=0x7f080000;
-        public static final int qr_scan_btn=0x7f080016;
-        public static final int three=0x7f080002;
-        public static final int title_activity_a=0x7f08000f;
-        public static final int title_activity_main=0x7f08000d;
-        public static final int title_activity_qr_first=0x7f08000e;
-        public static final int title_activity_qrscan=0x7f08000a;
-        public static final int title_activity_qrscan_first=0x7f080010;
-        public static final int title_activity_sliding=0x7f080018;
-        public static final int toggle_title=0x7f080005;
-        public static final int two=0x7f080001;
+        public static final int action_settings=0x7f08000d;
+        public static final int alternate_title=0x7f080006;
+        public static final int app_name=0x7f080005;
+        public static final int barcode_app=0x7f080000;
+        public static final int firstclueImg=0x7f080013;
+        public static final int hello_world=0x7f08000e;
+        public static final int image_clue_1=0x7f080014;
+        public static final int image_clue_2=0x7f080015;
+        public static final int image_clue_3=0x7f080016;
+        public static final int image_clue_4=0x7f080017;
+        public static final int menu_about=0x7f08001a;
+        public static final int menu_refresh=0x7f080008;
+        public static final int menu_scan=0x7f08000b;
+        public static final int menu_search=0x7f080009;
+        public static final int menu_share=0x7f08000a;
+        public static final int next=0x7f080019;
+        public static final int nothing=0x7f080025;
+        public static final int one=0x7f080002;
+        public static final int qr_scan_btn=0x7f080018;
+        public static final int story_0=0x7f08001c;
+        public static final int story_1=0x7f08001d;
+        public static final int story_2=0x7f08001e;
+        public static final int story_4=0x7f08001f;
+        public static final int story_5=0x7f080020;
+        public static final int story_6=0x7f080021;
+        public static final int story_7=0x7f080022;
+        public static final int story_8=0x7f080023;
+        public static final int story_8_reauth=0x7f080024;
+        public static final int story_9=0x7f080026;
+        public static final int three=0x7f080004;
+        public static final int title_activity_a=0x7f080011;
+        public static final int title_activity_main=0x7f08000f;
+        public static final int title_activity_qr_first=0x7f080010;
+        public static final int title_activity_qrscan=0x7f08000c;
+        public static final int title_activity_qrscan_first=0x7f080012;
+        public static final int title_activity_sliding=0x7f08001b;
+        public static final int toggle_title=0x7f080007;
+        public static final int two=0x7f080003;
+        public static final int url_barcode=0x7f080001;
     }
     public static final class style {
-        public static final int ActionBar=0x7f090009;
+        public static final int ActionBar=0x7f09000c;
         public static final int ActionBarCompat=0x7f090001;
         public static final int ActionBarCompatHomeItem=0x7f090007;
         public static final int ActionBarCompatItem=0x7f090006;
@@ -175,8 +215,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ActionBarCompatProgressIndicator=0x7f090003;
         public static final int ActionBarCompatTitle=0x7f090005;
         public static final int ActionBarCompatTitleBase=0x7f090004;
-        public static final int ActionBarTitle=0x7f09000a;
+        public static final int ActionBarTitle=0x7f09000d;
         public static final int AppTheme=0x7f090000;
+        public static final int HelpText=0x7f090009;
+        public static final int HelpText_Caption=0x7f09000b;
+        public static final int HelpText_Heading=0x7f09000a;
         /**  Customization  
          */
         public static final int TagMarker=0x7f090008;
@@ -208,7 +251,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.orlando.qrscan:actionbarCompatItemHomeStyle
+          @attr name android:actionbarCompatItemHomeStyle
         */
         public static final int AppTheme_actionbarCompatItemHomeStyle = 2;
         /**
@@ -218,7 +261,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.orlando.qrscan:actionbarCompatItemStyle
+          @attr name android:actionbarCompatItemStyle
         */
         public static final int AppTheme_actionbarCompatItemStyle = 1;
         /**
@@ -228,7 +271,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.orlando.qrscan:actionbarCompatProgressIndicatorStyle
+          @attr name android:actionbarCompatProgressIndicatorStyle
         */
         public static final int AppTheme_actionbarCompatProgressIndicatorStyle = 3;
         /**
@@ -238,7 +281,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.orlando.qrscan:actionbarCompatTitleStyle
+          @attr name android:actionbarCompatTitleStyle
         */
         public static final int AppTheme_actionbarCompatTitleStyle = 0;
         /** Attributes that can be used with a BezelImageView.
@@ -263,7 +306,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.orlando.qrscan:borderDrawable
+          @attr name android:borderDrawable
         */
         public static final int BezelImageView_borderDrawable = 1;
         /**
@@ -273,7 +316,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.orlando.qrscan:maskDrawable
+          @attr name android:maskDrawable
         */
         public static final int BezelImageView_maskDrawable = 0;
     };

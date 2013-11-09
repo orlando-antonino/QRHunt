@@ -46,11 +46,13 @@
         </activity>
         <activity
             android:name="com.orlando.qrscan.activity.MainActivity"
-            android:label="@string/title_activity_sliding" >
+            android:label="@string/title_activity_sliding"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.orlando.qrscan.activity.Sliding"
-            android:label="@string/title_activity_sliding" >
+            android:label="@string/title_activity_sliding"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

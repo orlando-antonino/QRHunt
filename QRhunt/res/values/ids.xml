@@ -28,6 +28,8 @@
 	    <item type="string" name="clue_three">http://qrscan.dne/?c=thknow</item>
 	    <item type="string" name="clue_four">http://qrscan.dne/?c=andfour</item>
      </string-array>
+     <string name="barcode_app" >com.google.zxing.client.android</string>
+     <string name="url_barcode" >market://details?id=com.google.zxing.client.android</string>
 </resources>
 
 

@@ -16,6 +16,10 @@
 
 package com.orlando.qrscan.activity;
 
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
@@ -39,9 +43,9 @@ import com.orlando.qrscan.R;
 
 public class MainActivity extends ActionBarActivity {
 	private static final String ME = "com.orlando.qrscan.activity.MainActivity";
-
+	private static final int DIALOG_ALERT = 10;
 	private FragmentManager fragmentManager = null;
-	private static final String barcodePackgName = "com.google.zxing.client.android";
+
 	QRscan_first qr_first = null;
 	QRscan_sec qr_sec = null;
 	QRscan_th qr_th = null;
@@ -51,87 +55,71 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		
-//		PackageManager mPm = getPackageManager();  // 1
-//		PackageInfo info;
-//		try {
-//			info = mPm.getPackageInfo(barcodePackgName, 0);
-//			if (info == null){
-//				Uri marketUri = Uri.parse("market://details?id=com.google.zxing.client.android");
-//				Intent playStoreIntent = new Intent(Intent.ACTION_VIEW,marketUri);
-//			    startActivity(playStoreIntent);
-//			    super.finish();
-//			}
-//		} catch (NameNotFoundException e1) {
-//			
-//			e1.printStackTrace();
-//		}  
-		
+		super.setTitle("GDG L-Ab QRHunt");
 
-            
-				ClueManager.initClueManager(getApplicationContext());
-				fragmentManager = getSupportFragmentManager();
-		
-				int prog = ClueManager.getProgress();
-				switch (prog) {
-				case 1:
-					try {
-						qr_first = new QRscan_first();
-		
-						boolean res = FragmentHandler.replaceFragment(fragmentManager,
-								"first", qr_first, R.id.content_frame);
-						Log.i("Main", "fRAGMENT " + "first" + " INSERITO: " + res);
-					} catch (Exception e) {
-						e.printStackTrace();
-						finish();
-					}
-					break;
-				case 2:
-					try {
-						qr_sec = new QRscan_sec();
-		
-						boolean res = FragmentHandler.replaceFragment(fragmentManager,
-								"sec", qr_sec, R.id.content_frame);
-						Log.i("Main", "fRAGMENT " + "sec" + " INSERITO: " + res);
-					} catch (Exception e) {
-						e.printStackTrace();
-						finish();
-					}
-					break;
-				case 3:
-					try {
-						qr_th = new QRscan_th();
-		
-						boolean res = FragmentHandler.replaceFragment(fragmentManager,
-								"th", qr_th, R.id.content_frame);
-						Log.i("Main", "fRAGMENT " + "th" + " INSERITO: " + res);
-					} catch (Exception e) {
-						e.printStackTrace();
-						finish();
-					}
-					break;
-					
-				case 4:
-					try {
-						qr_four = new QRscan_four();
-		
-						boolean res = FragmentHandler.replaceFragment(fragmentManager,
-								"four", qr_four, R.id.content_frame);
-						Log.i("Main", "fRAGMENT " + "four" + " INSERITO: " + res);
-					} catch (Exception e) {
-						e.printStackTrace();
-						finish();
-					}
-					break;
-				default:
-					break;
-				}
-        	
+		ClueManager.initClueManager(getApplicationContext());
+		fragmentManager = getSupportFragmentManager();
+
+		int prog = ClueManager.getProgress();
+		switch (prog) {
+		case 1:
+			try {
+				qr_first = new QRscan_first();
+
+				boolean res = FragmentHandler.replaceFragment(fragmentManager,
+						"first", qr_first, R.id.content_frame);
+				Log.i("Main", "fRAGMENT " + "first" + " INSERITO: " + res);
+			} catch (Exception e) {
+				e.printStackTrace();
+				finish();
+			}
+			break;
+		case 2:
+			try {
+				qr_sec = new QRscan_sec();
+
+				boolean res = FragmentHandler.replaceFragment(fragmentManager,
+						"sec", qr_sec, R.id.content_frame);
+				Log.i("Main", "fRAGMENT " + "sec" + " INSERITO: " + res);
+			} catch (Exception e) {
+				e.printStackTrace();
+				finish();
+			}
+			break;
+		case 3:
+			try {
+				qr_th = new QRscan_th();
+
+				boolean res = FragmentHandler.replaceFragment(fragmentManager,
+						"th", qr_th, R.id.content_frame);
+				Log.i("Main", "fRAGMENT " + "th" + " INSERITO: " + res);
+			} catch (Exception e) {
+				e.printStackTrace();
+				finish();
+			}
+			break;
+
+		case 4:
+			try {
+				qr_four = new QRscan_four();
+
+				boolean res = FragmentHandler.replaceFragment(fragmentManager,
+						"four", qr_four, R.id.content_frame);
+				Log.i("Main", "fRAGMENT " + "four" + " INSERITO: " + res);
+			} catch (Exception e) {
+				e.printStackTrace();
+				finish();
+			}
+			break;
+		default:
+			break;
+		}
 
 	}
 
 	public void nextFrag(View v) {
 		int prog = ClueManager.getProgress();
-		
+
 		switch (prog) {
 		case 2:
 			try {
@@ -170,7 +158,7 @@ public class MainActivity extends ActionBarActivity {
 		default:
 			break;
 		}
-		
+
 	}
 
 	@Override
@@ -189,12 +177,10 @@ public class MainActivity extends ActionBarActivity {
 		if (scanningResult != null) {
 			String scanContent = scanningResult.getContents();
 			// String scanType = scanningResult.getFormatName();
-//			scanContent = "http://qrscan.dne/?c=firstclue";
+			// scanContent = "http://qrscan.dne/?c=firstclue";
 			showToast(scanContent);
 
-			if (false == ClueManager.setProgress(scanContent)) {
-            showToast("Wrong QR!!!");
-         }
+			ClueManager.setProgress(scanContent);
 		} else
 			showToast("no scan result");
 
@@ -224,6 +210,9 @@ public class MainActivity extends ActionBarActivity {
 			IntentIntegrator scanIntegrator = new IntentIntegrator(this);
 			scanIntegrator.initiateScan();
 			break;
+		 case R.id.about:
+			 showDialog(DIALOG_ALERT);
+		 break;
 		default:
 			break;
 		// case R.id.menu_refresh:
@@ -247,4 +236,29 @@ public class MainActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	@Override
+	  protected Dialog onCreateDialog(int id) {
+	    switch (id) {
+	    case DIALOG_ALERT:
+	      // create out AlterDialog
+	      Builder builder = new AlertDialog.Builder(this);
+	      builder.setMessage("Realized by Antonino Orlando, Alessandro Mancini and GDG L-Ab");
+	      builder.setCancelable(true);
+	      builder.setPositiveButton("Ok", new OkOnClickListener());
+	      
+	      AlertDialog dialog = builder.create();
+	      dialog.show();
+	    }
+	    return super.onCreateDialog(id);
+	  }
+
+	  private final class OkOnClickListener implements
+	      DialogInterface.OnClickListener {
+	    public void onClick(DialogInterface dialog, int which) {
+//	      Toast.makeText(getApplicationContext(), "Activity will continue",
+//	          Toast.LENGTH_LONG).show();
+	    }
+	  }
+
+	 
 }

@@ -20,7 +20,7 @@
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
-    <string name="app_name">QRhunt</string>
+    <string name="app_name">GDG L-Ab QRhunt</string>
     <string name="alternate_title">An alternate title that is long</string>
     <string name="toggle_title">Toggle title</string>
     <string name="menu_refresh">Refresh</string>
@@ -41,6 +41,19 @@
     <string name="image_clue_4">Image Clue 4</string>
     <string name="qr_scan_btn">QR scan</string>
     <string name="next">NEXT</string>
+    <string name="menu_about">about</string>
     <string name="title_activity_sliding">Sliding</string>
+    
+    <string name="story_0">Welcome to\nGDG L-AB Hunt, the QRCode game at\nRome DevFest 2013!</string>
+    <string name="story_1"><b>Alex</b>, the Android Dog, has gone missing!</string>
+    <string name="story_2"><i><b>Bugdroid is very sad,</b></i> and needs your help to find his dog!</string>
+    <string name="story_4">Follow Alex\'s trail by scanning special QRCode!  You will find them all around the building.</string>
+    <string name="story_5">There will be multiple tags, so keep your eyes open!</string>
+    <string name="story_6">Are you ready?  Your journey awaits...</string>
+    <string name="story_7">Oh, one last thing...</string>
+    <string name="story_8">Press the button below to accept your quest.</string>
+    <string name="story_8_reauth">...</string>
+    <string name="nothing"></string>
+    <string name="story_9"></string>
 
 </resources>
