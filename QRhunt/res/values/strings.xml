@@ -44,7 +44,7 @@
     <string name="menu_about">about</string>
     <string name="title_activity_sliding">Sliding</string>
     
-    <string name="story_0">Welcome to\nGDG L-AB Hunt, the QRCode game at\nRome DevFest 2013!</string>
+    <string name="story_0">Welcome to\nGDG L-AB Hunt\nthe QRCode game at\nRome DevFest 2013!</string>
     <string name="story_1"><b>Alex</b>, the Android Dog, has gone missing!</string>
     <string name="story_2"><i><b>Bugdroid is very sad,</b></i> and needs your help to find his dog!</string>
     <string name="story_4">Follow Alex\'s trail by scanning special QRCode!  You will find them all around the building.</string>
@@ -55,5 +55,8 @@
     <string name="story_8_reauth">...</string>
     <string name="nothing"></string>
     <string name="story_9"></string>
-
+    <string name="clue01">The last time we see Alex,\nhe was near this window...\nDo you see somethings?</string>
+    <string name="clue02">Maybe he just feeling cold.\n\nIs this a radiator?</string>
+    <string name="clue03">Who is this guy?\nTalk with him\nhe surely know where is Alex!!!</string>
+    
 </resources>
