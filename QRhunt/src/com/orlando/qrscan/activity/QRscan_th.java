@@ -46,7 +46,7 @@ public class QRscan_th extends Fragment {
 		
 	}
 	public void setText(String scanContent, String scanType) {
-	     formatResultTxt3 = (TextView) getView().findViewById(R.id.textType3);
+//	     formatResultTxt3 = (TextView) getView().findViewById(R.id.textType3);
 	     valResultTxt3  = (TextView) getView().findViewById(R.id.textResult3);
 
 	     formatResultTxt3.setText(scanType);
