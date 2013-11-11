@@ -49,7 +49,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/sign_in_button"
             android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/story_9" />
