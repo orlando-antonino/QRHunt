@@ -20,6 +20,7 @@
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
+    <string name="four">4</string>
     <string name="app_name">GDG L-Ab QRhunt</string>
     <string name="alternate_title">An alternate title that is long</string>
     <string name="toggle_title">Toggle title</string>
@@ -57,6 +58,8 @@
     <string name="story_9"></string>
     <string name="clue01">The last time we see Alex,\nhe was near this window...\nDo you see somethings?</string>
     <string name="clue02">Maybe he just feeling cold.\n\nIs this a radiator?</string>
-    <string name="clue03">Who is this guy?\nTalk with him\nhe surely know where is Alex!!!</string>
+    <string name="clue03">It is so near ...</string>
+    <string name="clue04">Could be the last one ??... </string>
+    <string name="finalclue">You Win! but who is this guy?\nTalk with him\nhe surely know where is Alex!!!</string>
     
 </resources>
