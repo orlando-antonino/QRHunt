@@ -50,6 +50,7 @@ public class MainActivity extends ActionBarActivity {
 	QRscan_sec qr_sec = null;
 	QRscan_th qr_th = null;
 	QRscan_four qr_four = null;
+	QRscan_win qr_win = null;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -61,6 +62,7 @@ public class MainActivity extends ActionBarActivity {
 		fragmentManager = getSupportFragmentManager();
 
 		int prog = ClueManager.getProgress();
+		
 		switch (prog) {
 		case 1:
 			try {
@@ -107,6 +109,17 @@ public class MainActivity extends ActionBarActivity {
 				finish();
 			}
 			break;
+		case 5:
+			try {
+				qr_win = new QRscan_win();
+
+				boolean res = FragmentHandler.replaceFragment(fragmentManager, "win", qr_win, R.id.content_frame);
+				Log.i("Main", "fRAGMENT " + "win" + " INSERITO: " + res);
+			} catch (Exception e) {
+				e.printStackTrace();
+				finish();
+			}
+			break;
 		default:
 			break;
 		}
@@ -143,6 +156,17 @@ public class MainActivity extends ActionBarActivity {
 
 				boolean res = FragmentHandler.replaceFragment(fragmentManager, "four", qr_four, R.id.content_frame);
 				Log.i("Main", "fRAGMENT " + "four" + " INSERITO: " + res);
+			} catch (Exception e) {
+				e.printStackTrace();
+				finish();
+			}
+			break;
+		case 5:
+			try {
+				qr_win = new QRscan_win();
+
+				boolean res = FragmentHandler.replaceFragment(fragmentManager, "win", qr_win, R.id.content_frame);
+				Log.i("Main", "fRAGMENT " + "win" + " INSERITO: " + res);
 			} catch (Exception e) {
 				e.printStackTrace();
 				finish();
@@ -200,7 +224,7 @@ public class MainActivity extends ActionBarActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			Toast.makeText(this, "Qr Scan", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "GDG L-Ab Qr Scan", Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.scan:
 			IntentIntegrator scanIntegrator = new IntentIntegrator(this);
