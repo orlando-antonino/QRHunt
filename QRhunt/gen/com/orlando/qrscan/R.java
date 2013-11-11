@@ -68,82 +68,82 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int alex_flat=0x7f020004;
         public static final int arrowr=0x7f020005;
         public static final int candle=0x7f020006;
-        public static final int dashed_circle=0x7f020007;
-        public static final int green_circle=0x7f020008;
-        public static final int green_circle_arrow=0x7f020009;
-        public static final int greengoogle=0x7f02000a;
-        public static final int ic_action_refresh=0x7f02000b;
-        public static final int ic_action_search=0x7f02000c;
-        public static final int ic_action_share=0x7f02000d;
-        public static final int ic_home=0x7f02000e;
-        public static final int ic_launcher=0x7f02000f;
-        public static final int ic_menu_share=0x7f020010;
-        public static final int jelly=0x7f020011;
-        public static final int logo=0x7f020012;
-        public static final int octopus=0x7f020013;
-        public static final int pawprint=0x7f020014;
-        public static final int red_circle=0x7f020015;
-        public static final int sad_bugdroid=0x7f020016;
-        public static final int solid_circle=0x7f020017;
-        public static final int tag_sample=0x7f020018;
-        public static final int tag_sample_=0x7f020019;
+        public static final int clue01=0x7f020007;
+        public static final int clue02=0x7f020008;
+        public static final int clue03=0x7f020009;
+        public static final int dashed_circle=0x7f02000a;
+        public static final int green_circle=0x7f02000b;
+        public static final int green_circle_arrow=0x7f02000c;
+        public static final int greengoogle=0x7f02000d;
+        public static final int ic_action_refresh=0x7f02000e;
+        public static final int ic_action_search=0x7f02000f;
+        public static final int ic_action_share=0x7f020010;
+        public static final int ic_home=0x7f020011;
+        public static final int ic_launcher=0x7f020012;
+        public static final int ic_menu_share=0x7f020013;
+        public static final int jelly=0x7f020014;
+        public static final int logo=0x7f020015;
+        public static final int octopus=0x7f020016;
+        public static final int pawprint=0x7f020017;
+        public static final int red_circle=0x7f020018;
+        public static final int sad_bugdroid=0x7f020019;
+        public static final int solid_circle=0x7f02001a;
+        public static final int tag_sample=0x7f02001b;
+        public static final int tag_sample_=0x7f02001c;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f060006;
-        public static final int about=0x7f060035;
-        public static final int action_settings=0x7f060036;
+        public static final int about=0x7f060032;
+        public static final int action_settings=0x7f060033;
         public static final int actionbar_compat=0x7f060000;
         public static final int actionbar_compat_item_refresh=0x7f060003;
         public static final int actionbar_compat_item_refresh_progress=0x7f060002;
         public static final int actionbar_compat_title=0x7f060001;
-        public static final int closeSlides=0x7f06002b;
-        public static final int clueStatus=0x7f06000a;
-        public static final int content=0x7f06002e;
-        public static final int content_frame=0x7f06002d;
-        public static final int drawer_layout=0x7f06002c;
-        public static final int imageView=0x7f06002f;
-        public static final int imageView1=0x7f060009;
-        public static final int imageView2=0x7f06001a;
-        public static final int imageView3=0x7f060022;
-        public static final int imageView4=0x7f060012;
+        public static final int closeSlides=0x7f060028;
+        public static final int clueStatus=0x7f060009;
+        public static final int content=0x7f06002b;
+        public static final int content_frame=0x7f06002a;
+        public static final int drawer_layout=0x7f060029;
+        public static final int imageView=0x7f06002c;
+        public static final int imageView1=0x7f060008;
+        public static final int imageView2=0x7f060018;
+        public static final int imageView3=0x7f06001f;
+        public static final int imageView4=0x7f060011;
         public static final int menu_refresh=0x7f060004;
         public static final int menu_search=0x7f060005;
-        public static final int next_button=0x7f06002a;
-        public static final int pager=0x7f060028;
-        public static final int prev_button=0x7f060029;
-        public static final int scan=0x7f060034;
-        public static final int sign_in_button=0x7f060033;
-        public static final int tag_1_found_marker=0x7f06000d;
-        public static final int tag_1_next=0x7f06000f;
-        public static final int tag_1_notfound_marker=0x7f06000c;
-        public static final int tag_2_found_marker=0x7f06001d;
-        public static final int tag_2_next=0x7f06001f;
-        public static final int tag_2_notfound_marker=0x7f06001c;
-        public static final int tag_3_found_marker=0x7f060025;
-        public static final int tag_3_next=0x7f060027;
-        public static final int tag_3_notfound_marker=0x7f060024;
-        public static final int tag_4_found_marker=0x7f060015;
-        public static final int tag_4_next=0x7f060017;
-        public static final int tag_4_notfound_marker=0x7f060014;
-        public static final int tag_container_1=0x7f06000b;
-        public static final int tag_container_11=0x7f06000e;
-        public static final int tag_container_2=0x7f06001b;
-        public static final int tag_container_22=0x7f06001e;
-        public static final int tag_container_3=0x7f060023;
-        public static final int tag_container_33=0x7f060026;
-        public static final int tag_container_4=0x7f060013;
-        public static final int tag_container_44=0x7f060016;
+        public static final int next_button=0x7f060027;
+        public static final int pager=0x7f060025;
+        public static final int prev_button=0x7f060026;
+        public static final int scan=0x7f060031;
+        public static final int sign_in_button=0x7f060030;
+        public static final int tag_1_found_marker=0x7f06000c;
+        public static final int tag_1_next=0x7f06000e;
+        public static final int tag_1_notfound_marker=0x7f06000b;
+        public static final int tag_2_found_marker=0x7f06001b;
+        public static final int tag_2_next=0x7f06001d;
+        public static final int tag_2_notfound_marker=0x7f06001a;
+        public static final int tag_3_found_marker=0x7f060022;
+        public static final int tag_3_next=0x7f060024;
+        public static final int tag_3_notfound_marker=0x7f060021;
+        public static final int tag_4_found_marker=0x7f060014;
+        public static final int tag_4_next=0x7f060016;
+        public static final int tag_4_notfound_marker=0x7f060013;
+        public static final int tag_container_1=0x7f06000a;
+        public static final int tag_container_11=0x7f06000d;
+        public static final int tag_container_2=0x7f060019;
+        public static final int tag_container_22=0x7f06001c;
+        public static final int tag_container_3=0x7f060020;
+        public static final int tag_container_33=0x7f060023;
+        public static final int tag_container_4=0x7f060012;
+        public static final int tag_container_44=0x7f060015;
         public static final int textResult=0x7f060007;
-        public static final int textResult2=0x7f060018;
-        public static final int textResult3=0x7f060020;
-        public static final int textResult4=0x7f060010;
-        public static final int textType=0x7f060008;
-        public static final int textType2=0x7f060019;
-        public static final int textType3=0x7f060021;
-        public static final int textType4=0x7f060011;
-        public static final int textView=0x7f060030;
-        public static final int textView2=0x7f060032;
-        public static final int textView3=0x7f060031;
+        public static final int textResult2=0x7f060017;
+        public static final int textResult3=0x7f06001e;
+        public static final int textResult4=0x7f06000f;
+        public static final int textType4=0x7f060010;
+        public static final int textView=0x7f06002d;
+        public static final int textView2=0x7f06002f;
+        public static final int textView3=0x7f06002e;
     }
     public static final class layout {
         public static final int actionbar_compat=0x7f030000;
@@ -170,6 +170,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int alternate_title=0x7f080006;
         public static final int app_name=0x7f080005;
         public static final int barcode_app=0x7f080000;
+        public static final int clue01=0x7f080027;
+        public static final int clue02=0x7f080028;
+        public static final int clue03=0x7f080029;
         public static final int firstclueImg=0x7f080013;
         public static final int hello_world=0x7f08000e;
         public static final int image_clue_1=0x7f080014;
@@ -251,7 +254,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionbarCompatItemHomeStyle
+          @attr name com.orlando.qrscan:actionbarCompatItemHomeStyle
         */
         public static final int AppTheme_actionbarCompatItemHomeStyle = 2;
         /**
@@ -261,7 +264,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionbarCompatItemStyle
+          @attr name com.orlando.qrscan:actionbarCompatItemStyle
         */
         public static final int AppTheme_actionbarCompatItemStyle = 1;
         /**
@@ -271,7 +274,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionbarCompatProgressIndicatorStyle
+          @attr name com.orlando.qrscan:actionbarCompatProgressIndicatorStyle
         */
         public static final int AppTheme_actionbarCompatProgressIndicatorStyle = 3;
         /**
@@ -281,7 +284,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionbarCompatTitleStyle
+          @attr name com.orlando.qrscan:actionbarCompatTitleStyle
         */
         public static final int AppTheme_actionbarCompatTitleStyle = 0;
         /** Attributes that can be used with a BezelImageView.
@@ -306,7 +309,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:borderDrawable
+          @attr name com.orlando.qrscan:borderDrawable
         */
         public static final int BezelImageView_borderDrawable = 1;
         /**
@@ -316,7 +319,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:maskDrawable
+          @attr name com.orlando.qrscan:maskDrawable
         */
         public static final int BezelImageView_maskDrawable = 0;
     };
