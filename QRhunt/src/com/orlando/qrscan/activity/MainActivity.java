@@ -16,6 +16,7 @@
 
 package com.orlando.qrscan.activity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
@@ -45,7 +46,9 @@ public class MainActivity extends ActionBarActivity {
 	private static final String ME = "com.orlando.qrscan.activity.MainActivity";
 	private static final int DIALOG_ALERT = 10;
 	private FragmentManager fragmentManager = null;
+	boolean hide_scan =false;
 
+	Menu _menu = null;
 	QRscan_first qr_first = null;
 	QRscan_sec qr_sec = null;
 	QRscan_th qr_th = null;
@@ -62,7 +65,7 @@ public class MainActivity extends ActionBarActivity {
 		fragmentManager = getSupportFragmentManager();
 
 		int prog = ClueManager.getProgress();
-		
+
 		switch (prog) {
 		case 1:
 			try {
@@ -112,9 +115,10 @@ public class MainActivity extends ActionBarActivity {
 		case 5:
 			try {
 				qr_win = new QRscan_win();
-
+				
 				boolean res = FragmentHandler.replaceFragment(fragmentManager, "win", qr_win, R.id.content_frame);
 				Log.i("Main", "fRAGMENT " + "win" + " INSERITO: " + res);
+				hide_scan = true;
 			} catch (Exception e) {
 				e.printStackTrace();
 				finish();
@@ -167,6 +171,9 @@ public class MainActivity extends ActionBarActivity {
 
 				boolean res = FragmentHandler.replaceFragment(fragmentManager, "win", qr_win, R.id.content_frame);
 				Log.i("Main", "fRAGMENT " + "win" + " INSERITO: " + res);
+				
+				hide_scan = true;
+				this.hideMenu();
 			} catch (Exception e) {
 				e.printStackTrace();
 				finish();
@@ -200,7 +207,7 @@ public class MainActivity extends ActionBarActivity {
 			}
 			else
 			{
-				showToast(scanContent);
+				showToast("ok. click next button");
 			}
 		} else
 			showToast("no scan result");
@@ -212,14 +219,25 @@ public class MainActivity extends ActionBarActivity {
 		toast.show();
 	}
 
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+
 		MenuInflater menuInflater = getMenuInflater();
 		menuInflater.inflate(R.menu.main, menu);
-
+		_menu = menu;
+		if (hide_scan){
+			this.hideMenu();
+		}	
 		return super.onCreateOptionsMenu(menu);
 	}
-
+	@SuppressLint("NewApi")
+	public void hideMenu (){
+		
+		MenuItem item = _menu.findItem(R.id.scan);
+		item.setVisible(false);
+		this.invalidateOptionsMenu();
+	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {

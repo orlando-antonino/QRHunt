@@ -84,7 +84,7 @@
 	                android:layout_height="70dp"
 	                android:src="@drawable/green_circle_arrow"
 	                android:visibility="gone"
-	                 />
+	                android:onClick="nextFrag" />
   	    </LinearLayout>   
    
 	</LinearLayout>
