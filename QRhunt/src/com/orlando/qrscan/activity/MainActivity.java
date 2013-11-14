@@ -27,6 +27,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentManager;
@@ -73,6 +74,7 @@ public class MainActivity extends ActionBarActivity {
 
 				boolean res = FragmentHandler.replaceFragment(fragmentManager, "first", qr_first, R.id.content_frame);
 				Log.i("Main", "fRAGMENT " + "first" + " INSERITO: " + res);
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 				finish();
@@ -84,6 +86,7 @@ public class MainActivity extends ActionBarActivity {
 
 				boolean res = FragmentHandler.replaceFragment(fragmentManager, "sec", qr_sec, R.id.content_frame);
 				Log.i("Main", "fRAGMENT " + "sec" + " INSERITO: " + res);
+
 			} catch (Exception e) {
 				e.printStackTrace();
 				finish();
@@ -118,7 +121,9 @@ public class MainActivity extends ActionBarActivity {
 				
 				boolean res = FragmentHandler.replaceFragment(fragmentManager, "win", qr_win, R.id.content_frame);
 				Log.i("Main", "fRAGMENT " + "win" + " INSERITO: " + res);
+				
 				hide_scan = true;
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 				finish();
@@ -139,6 +144,7 @@ public class MainActivity extends ActionBarActivity {
 				qr_sec = new QRscan_sec();
 				boolean res = FragmentHandler.replaceFragment(fragmentManager, "sec", qr_sec, R.id.content_frame);
 				Log.i("Main", "fRAGMENT " + "sec" + " INSERITO: " + res);
+						
 			} catch (Exception e) {
 				e.printStackTrace();
 				finish();
@@ -173,7 +179,7 @@ public class MainActivity extends ActionBarActivity {
 				Log.i("Main", "fRAGMENT " + "win" + " INSERITO: " + res);
 				
 				hide_scan = true;
-				this.hideMenu();
+//				this.hideMenu();
 			} catch (Exception e) {
 				e.printStackTrace();
 				finish();
@@ -198,8 +204,6 @@ public class MainActivity extends ActionBarActivity {
 
 		if (scanningResult != null) {
 			String scanContent = scanningResult.getContents();
-			// String scanType = scanningResult.getFormatName();
-			// scanContent = "http://qrscan.dne/?c=firstclue";
 
 			if (false == ClueManager.setProgress(scanContent))
 			{
@@ -223,21 +227,53 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
+		
 		MenuInflater menuInflater = getMenuInflater();
 		menuInflater.inflate(R.menu.main, menu);
-		_menu = menu;
-		if (hide_scan){
-			this.hideMenu();
-		}	
+//		_menu = menu;
+//		if (hide_scan){
+//			this.hideMenu();
+//		}	
 		return super.onCreateOptionsMenu(menu);
 	}
-	@SuppressLint("NewApi")
-	public void hideMenu (){
-		
-		MenuItem item = _menu.findItem(R.id.scan);
-		item.setVisible(false);
-		this.invalidateOptionsMenu();
-	}
+
+	
+	
+
+	//	@SuppressLint("NewApi")
+//	public void hideMenu (){
+//		
+//		MenuItem item = _menu.findItem(R.id.scan);
+//		item.setVisible(false);
+////	item.setEnabled(false);	
+//	
+//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+//			this.invalidateOptionsMenu(); 
+//		}
+//		else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB){
+//			_menu.clear();
+//		}
+//		
+//	}
+//	@SuppressLint("NewApi")
+//	@Override
+//	public boolean onPrepareOptionsMenu(Menu menu) {
+////	    menu.clear();
+//		MenuInflater menuInflater = getMenuInflater();
+//		menuInflater.inflate(R.menu.main, menu);
+////		_menu = menu;
+////		if (hide_scan==true){
+//////			hideMenu ();
+////			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+////				this.invalidateOptionsMenu(); 
+////			}
+////			else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB){
+////				_menu.clear();
+////			}
+////			}
+//	    return super.onPrepareOptionsMenu(menu);
+//	}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -245,32 +281,17 @@ public class MainActivity extends ActionBarActivity {
 			Toast.makeText(this, "GDG L-Ab Qr Scan", Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.scan:
-			IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-			scanIntegrator.initiateScan();
+			if (hide_scan!=true){
+				IntentIntegrator scanIntegrator = new IntentIntegrator(this);
+				scanIntegrator.initiateScan();
+			}
 			break;
 		case R.id.about:
 			showDialog(DIALOG_ALERT);
 			break;
 		default:
 			break;
-		// case R.id.menu_refresh:
-		// Toast.makeText(this, "Fake refreshing...",
-		// Toast.LENGTH_SHORT).show();
-		// getActionBarHelper().setRefreshActionItemState(true);
-		// getWindow().getDecorView().postDelayed(
-		// new Runnable() {
-		// @Override
-		// public void run() {
-		// getActionBarHelper().setRefreshActionItemState(false);
-		// }
-		// }, 1000);
-		// break;
-		//
 
-		//
-		// case R.id.menu_share:
-		// Toast.makeText(this, "Tapped share", Toast.LENGTH_SHORT).show();
-		// break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
